@@ -35,7 +35,7 @@
 {
     //提示框
     IoTAlertView *_alertView;
-    
+    UIAlertView *cAlertView;
     //数据点的临时变量
     BOOL bSwitch;
     BOOL bFault;
@@ -100,7 +100,7 @@
     
     self.navigationItem.title = @"净水机";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_menu"] style:UIBarButtonItemStylePlain target:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_start"] style:UIBarButtonItemStylePlain target:self action:@selector(onPower)];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -146,6 +146,7 @@
     }
     [XPGWifiSDK sharedInstance].delegate = nil;
     [_alertView hide:YES];
+    [cAlertView dismissWithClickedButtonIndex:0 animated:NO];
 }
 
 - (void)initDevice{
@@ -304,6 +305,10 @@
 }
 
 #pragma mark - Actions
+-(void)setRightBarButtonItem{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_start"] style:UIBarButtonItemStylePlain target:self action:@selector(onPower)];
+}
+
 - (void)onDisconnected {
     //断线且页面在控制页面时才弹框
     UIViewController *currentController = self.navigationController.viewControllers.lastObject;
@@ -339,9 +344,9 @@
     if(bSwitch)
     {
         //关机
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否确定关机？" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
-        alertView.tag = ALERT_TAG_SHUTDOWN;
-        [alertView show];
+        cAlertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否确定关机？" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
+        cAlertView.tag = ALERT_TAG_SHUTDOWN;
+        [cAlertView show];
     }
     else
     {
@@ -355,19 +360,21 @@
     [self writeDataPoint:IoTDeviceWriteOnOff value:@1];
     [self writeDataPoint:IoTDeviceWriteUpdateData value:nil];
     self.shutDownView.hidden = YES;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_start"] style:UIBarButtonItemStylePlain target:self action:@selector(onPower)];
+    [self setRightBarButtonItem];
 }
 //滤芯冲洗
 - (IBAction)onCleanWater:(id)sender {
     if (iMode != 1) {
         [self selectMode:1 sendToDevice:YES];
     }
+    [self writeDataPoint:IoTDeviceWriteUpdateData value:nil];
 }
 //净水
 - (IBAction)onFilterFlush:(id)sender {
     if (iMode != 2) {
         [self selectMode:2 sendToDevice:YES];
     }
+    [self writeDataPoint:IoTDeviceWriteUpdateData value:nil];
 }
 //模式
 - (void)selectMode:(NSInteger)index sendToDevice:(BOOL)send
@@ -416,14 +423,14 @@
     UIButton *btn = sender;
     
     self.btnReset.tag = btn.tag;
-
+    
     self.resetView.hidden = NO;
     
     [self setFilterStatus:btn.tag];
 }
 
 -(void)setFilterStatus:(NSInteger)index{
-
+    
     switch (index) {
         case 0:
             self.textFilterName.text = @"PP棉";
@@ -476,11 +483,11 @@
     self.textFilterLift.text = [NSString stringWithFormat:@"%@小时",@(index)];
     self.textFilterValue.text = [NSString stringWithFormat:@"%ld%@",(long)value,@"%"];
     
-    if (value <= 10) {
+    if (value < 11) {
         button.selected = YES;
         self.textFilterStatus.text = @"需要更换";
         self.textFilterStatus.textColor = [UIColor redColor];
-    }else if (value > 10){
+    }else if (value >= 11){
         button.selected = NO;
         self.textFilterStatus.text = @"正常";
         self.textFilterStatus.textColor = [UIColor blackColor];
@@ -628,6 +635,7 @@
          */
         self.shutDownView.hidden = bSwitch;
         [self selectMode:iMode sendToDevice:NO];
+        [self setRightBarButtonItem];
         
         [self selectFilterStatus:iFilter1 Tag:0];
         [self selectFilterStatus:iFilter2 Tag:1];
@@ -651,6 +659,7 @@
         if(!bSwitch)
         {
             [self onPower];
+            [cAlertView dismissWithClickedButtonIndex:0 animated:NO];
             return YES;
         }
     }
@@ -678,7 +687,7 @@
      */
     
     NSDate *date = [NSDate date];
-
+    
     if(self.faults.count > 0)
     {
         for(NSDictionary *dict in self.faults)
@@ -690,7 +699,7 @@
         }
     }
     [self onUpdateAlarm];
-
+    
     return YES;
 }
 
