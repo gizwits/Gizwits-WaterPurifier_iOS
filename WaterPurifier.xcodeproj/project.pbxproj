@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A11D5E31C5B97160043FB4B /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A11D5DF1C5B97160043FB4B /* libEasyLink.a */; };
+		1A11D5E41C5B97160043FB4B /* libEsptouch_v0.3.3.4_4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A11D5E01C5B97160043FB4B /* libEsptouch_v0.3.3.4_4.a */; };
+		1A11D5E51C5B97160043FB4B /* libLibSimpleConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A11D5E11C5B97160043FB4B /* libLibSimpleConfig.a */; };
+		1A11D5E61C5B97160043FB4B /* XPGWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A11D5E21C5B97160043FB4B /* XPGWifiSDK.framework */; };
+		1A11D5E81C5B97610043FB4B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A11D5E71C5B97610043FB4B /* CoreTelephony.framework */; };
+		1A11D5EC1C5C9B270043FB4B /* IoTVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A11D5EA1C5C9B270043FB4B /* IoTVersion.m */; };
+		1A11D5ED1C5C9B270043FB4B /* IoTVersion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A11D5EB1C5C9B270043FB4B /* IoTVersion.xib */; };
+		1A11D5EF1C5C9C490043FB4B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A11D5EE1C5C9C490043FB4B /* Icon@2x.png */; };
 		5B59F8F51B462298008E6C7B /* IoTRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B59F8F41B462298008E6C7B /* IoTRecord.m */; };
 		5BC1B69B1B40FB890082C80F /* IoTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1B6991B40FB890082C80F /* IoTMainController.m */; };
 		5BC1B69C1B40FB890082C80F /* IoTMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC1B69A1B40FB890082C80F /* IoTMainController.xib */; };
@@ -77,7 +85,6 @@
 		EE5C0E4F1A3FC9FA0019CFDD /* IoTHelpDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5C0E4D1A3FC9FA0019CFDD /* IoTHelpDetail.xib */; };
 		EE5D35391A305293001C1E09 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5D35371A305293001C1E09 /* libcrypto.a */; };
 		EE5D353A1A305293001C1E09 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5D35381A305293001C1E09 /* libssl.a */; };
-		EE76914C1A43F14900B682DD /* XPGWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE76914B1A43F14900B682DD /* XPGWifiSDK.framework */; };
 		EE76934C1A44019400B682DD /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE7693371A44019400B682DD /* License.txt */; };
 		EE76934E1A44019400B682DD /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = EE76933E1A44019400B682DD /* SlideNavigationContorllerAnimatorFade.m */; };
 		EE76934F1A44019400B682DD /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7693401A44019400B682DD /* SlideNavigationContorllerAnimatorScale.m */; };
@@ -104,6 +111,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A11D5DF1C5B97160043FB4B /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasyLink.a; sourceTree = "<group>"; };
+		1A11D5E01C5B97160043FB4B /* libEsptouch_v0.3.3.4_4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEsptouch_v0.3.3.4_4.a; sourceTree = "<group>"; };
+		1A11D5E11C5B97160043FB4B /* libLibSimpleConfig.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLibSimpleConfig.a; sourceTree = "<group>"; };
+		1A11D5E21C5B97160043FB4B /* XPGWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XPGWifiSDK.framework; sourceTree = "<group>"; };
+		1A11D5E71C5B97610043FB4B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1A11D5E91C5C9B270043FB4B /* IoTVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTVersion.h; sourceTree = "<group>"; };
+		1A11D5EA1C5C9B270043FB4B /* IoTVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTVersion.m; sourceTree = "<group>"; };
+		1A11D5EB1C5C9B270043FB4B /* IoTVersion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTVersion.xib; sourceTree = "<group>"; };
+		1A11D5EE1C5C9C490043FB4B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		5B59F8F31B462298008E6C7B /* IoTRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTRecord.h; sourceTree = "<group>"; };
 		5B59F8F41B462298008E6C7B /* IoTRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTRecord.m; sourceTree = "<group>"; };
 		5BC1B6981B40FB890082C80F /* IoTMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTMainController.h; sourceTree = "<group>"; };
@@ -262,7 +278,6 @@
 		EE5D35371A305293001C1E09 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		EE5D35381A305293001C1E09 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		EE7691471A43F14500B682DD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		EE76914B1A43F14900B682DD /* XPGWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XPGWifiSDK.framework; sourceTree = "<group>"; };
 		EE7693371A44019400B682DD /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		EE76933C1A44019400B682DD /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
 		EE76933D1A44019400B682DD /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
@@ -327,12 +342,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A11D5E81C5B97610043FB4B /* CoreTelephony.framework in Frameworks */,
 				C3EDEFB61AA5B87400972862 /* CoreLocation.framework in Frameworks */,
-				EE76914C1A43F14900B682DD /* XPGWifiSDK.framework in Frameworks */,
 				EE5D353A1A305293001C1E09 /* libssl.a in Frameworks */,
 				EE13C0A91A2709650033E8E2 /* CoreMedia.framework in Frameworks */,
+				1A11D5E31C5B97160043FB4B /* libEasyLink.a in Frameworks */,
 				EE13C0A71A2709560033E8E2 /* libiconv.dylib in Frameworks */,
+				1A11D5E61C5B97160043FB4B /* XPGWifiSDK.framework in Frameworks */,
+				1A11D5E51C5B97160043FB4B /* libLibSimpleConfig.a in Frameworks */,
 				EE7694071A44091500B682DD /* libIoTProcessModel.a in Frameworks */,
+				1A11D5E41C5B97160043FB4B /* libEsptouch_v0.3.3.4_4.a in Frameworks */,
 				EE13C0A51A27094B0033E8E2 /* AVFoundation.framework in Frameworks */,
 				EE16CB111A1F0EE80009FB4E /* libc++.dylib in Frameworks */,
 				EE16CA681A1F0E680009FB4E /* SystemConfiguration.framework in Frameworks */,
@@ -494,6 +513,7 @@
 		E282E6B11AAE8A3000437088 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				1A11D5EE1C5C9C490043FB4B /* Icon@2x.png */,
 				5BC1B69F1B41329F0082C80F /* main */,
 				C3DECE7E1B0AE6BA00EFD7A9 /* menu */,
 				D88A6F0D1ABA6DDB006F350A /* alert */,
@@ -514,6 +534,7 @@
 		EE33B4C01A1C8ED00003854A = {
 			isa = PBXGroup;
 			children = (
+				1A11D5E71C5B97610043FB4B /* CoreTelephony.framework */,
 				EE33B4CB1A1C8ED00003854A /* WaterPurifier */,
 				EE33B4CA1A1C8ED00003854A /* Products */,
 			);
@@ -662,6 +683,9 @@
 		EE6BF5BD1A3EDD4E00363385 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				1A11D5E91C5C9B270043FB4B /* IoTVersion.h */,
+				1A11D5EA1C5C9B270043FB4B /* IoTVersion.m */,
+				1A11D5EB1C5C9B270043FB4B /* IoTVersion.xib */,
 				5B59F8F21B462298008E6C7B /* Fault */,
 				C3E3238F1A89A93F0023FF0A /* AccountManager */,
 				EE7F41C71A3F29CF00F68022 /* DeviceManager */,
@@ -693,7 +717,10 @@
 		EE76914A1A43F14900B682DD /* XPGWifiSDK */ = {
 			isa = PBXGroup;
 			children = (
-				EE76914B1A43F14900B682DD /* XPGWifiSDK.framework */,
+				1A11D5DF1C5B97160043FB4B /* libEasyLink.a */,
+				1A11D5E01C5B97160043FB4B /* libEsptouch_v0.3.3.4_4.a */,
+				1A11D5E11C5B97160043FB4B /* libLibSimpleConfig.a */,
+				1A11D5E21C5B97160043FB4B /* XPGWifiSDK.framework */,
 			);
 			name = XPGWifiSDK;
 			path = Utils/XPGWifiSDK;
@@ -947,6 +974,7 @@
 				D88A6F651ABA6DDB006F350A /* return_icon@2x.png in Resources */,
 				5BC1B6EA1B4148430082C80F /* button_14_2@2x.png in Resources */,
 				5BC1B6C41B41329F0082C80F /* button_8@2x.png in Resources */,
+				1A11D5EF1C5C9C490043FB4B /* Icon@2x.png in Resources */,
 				C3E323971A89A93F0023FF0A /* IoTAccountManager.xib in Resources */,
 				5BC1B6CA1B41329F0082C80F /* confirm_icon@2x.png in Resources */,
 				EEB74E7C1A4433930039E467 /* Localizable.strings in Resources */,
@@ -996,6 +1024,7 @@
 				EE7693531A44019400B682DD /* menu-button.png in Resources */,
 				5BC1B6CF1B41329F0082C80F /* icon_left@2x.png in Resources */,
 				C3DECE8A1B0AE6BA00EFD7A9 /* menu_88@2x.png in Resources */,
+				1A11D5ED1C5C9B270043FB4B /* IoTVersion.xib in Resources */,
 				C3DECE861B0AE6BA00EFD7A9 /* menu_88-02@2x.png in Resources */,
 				C3DECE851B0AE6BA00EFD7A9 /* device_list-32@2x.png in Resources */,
 			);
@@ -1025,6 +1054,7 @@
 				EE85B8C21A42895900B2833F /* IoTDeviceDetail.m in Sources */,
 				EE7693551A44019400B682DD /* SlideNavigationController.m in Sources */,
 				EE2769431A41880200E0E89F /* IoTAlertView.m in Sources */,
+				1A11D5EC1C5C9B270043FB4B /* IoTVersion.m in Sources */,
 				C36FFD201A89A33100DFEBC2 /* IoTAbout.m in Sources */,
 				EE76934F1A44019400B682DD /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 			);
@@ -1128,6 +1158,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Utils/XPGWifiSDK",
@@ -1146,8 +1177,11 @@
 					"$(PROJECT_DIR)/Utils/OpenSSL-Universal/library",
 					"$(PROJECT_DIR)/Utils/IoTProcessModel",
 					"$(PROJECT_DIR)/Utils/ZBarSDK",
+					"$(PROJECT_DIR)/Utils/XPGWifiSDK",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xtremeprog.WaterPurifier;
 				PRODUCT_NAME = WaterPurifier;
+				PROVISIONING_PROFILE = "9a687add-8837-418d-a3b0-537566ea164c";
 			};
 			name = Debug;
 		};
@@ -1158,6 +1192,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Utils/XPGWifiSDK",
@@ -1176,8 +1211,11 @@
 					"$(PROJECT_DIR)/Utils/OpenSSL-Universal/library",
 					"$(PROJECT_DIR)/Utils/IoTProcessModel",
 					"$(PROJECT_DIR)/Utils/ZBarSDK",
+					"$(PROJECT_DIR)/Utils/XPGWifiSDK",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xtremeprog.WaterPurifier;
 				PRODUCT_NAME = WaterPurifier;
+				PROVISIONING_PROFILE = "9a687add-8837-418d-a3b0-537566ea164c";
 			};
 			name = Release;
 		};

@@ -43,7 +43,7 @@ NSString * const IOT_PRODUCT       = @"cb53199acfea49c8b57ebce82a49365b";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //初始化
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"]];
-    model = [IoTProcessModel startWithAppID:IOT_APPKEY product:IOT_PRODUCT productJson:data];
+    model = [IoTProcessModel startWithAppID:IOT_APPKEY appSecret:@"186f367f70de4848ab63f80a32b5699a" product:IOT_PRODUCT productJson:data];
     model.delegate = self;
     
     //用户未注册-->登录
@@ -103,8 +103,12 @@ NSString * const IOT_PRODUCT       = @"cb53199acfea49c8b57ebce82a49365b";
 
 - (void)IoTProcessModelDidFinishedAddDevice:(NSInteger)result
 {
-    if(result != 0)
-    {
+    if(result == -27) {
+        //未能删除
+        NSString *message = @"无法绑定此设备，网络错误";
+        [[[IoTAlertView alloc] initWithMessage:message delegate:nil titleOK:nil] show:YES];
+    }
+    else if(result != 0) {
         //未能删除
         NSString *message = [NSString stringWithFormat:@"无法绑定此设备，错误码：%@", @(result)];
         [[[IoTAlertView alloc] initWithMessage:message delegate:nil titleOK:nil] show:YES];

@@ -31,7 +31,7 @@ int main(int argc, char * argv[]) {
             return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
         }
         @catch (NSException *exception) {
-            //在这里，可以处理程序的异常
+            //在这里，可以处理程序的异常无法绑定此
         }
     }
 }
