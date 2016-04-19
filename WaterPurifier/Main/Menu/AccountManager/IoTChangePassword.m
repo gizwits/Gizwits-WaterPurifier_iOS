@@ -40,6 +40,8 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"修改密码";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"return_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(onBack)];
+    self.textOldPass.keyboardType = UIKeyboardTypeASCIICapable;
+    self.textNewPass.keyboardType = UIKeyboardTypeASCIICapable;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,6 +63,15 @@
 
 #pragma mark - Actions
 - (IBAction)onConfirm:(id)sender {
+    [self.textOldPass resignFirstResponder];
+    [self.textNewPass resignFirstResponder];
+    
+    if(self.textOldPass.text.length < 6 || self.textOldPass.text.length > 16)
+    {
+        [[[IoTAlertView alloc] initWithMessage:@"旧密码长度必须在 6-16 之间" delegate:nil titleOK:@"确定"] show:YES];
+        return;
+    }
+    
     if(self.textNewPass.text.length < 6 || self.textNewPass.text.length > 16)
     {
         [[[IoTAlertView alloc] initWithMessage:@"新密码长度必须在 6-16 之间" delegate:nil titleOK:@"确定"] show:YES];

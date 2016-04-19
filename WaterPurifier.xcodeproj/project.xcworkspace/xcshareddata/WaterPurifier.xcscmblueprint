@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A33D85CAB896FEEDCCD28D3A956C41C6C2070472",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A33D85CAB896FEEDCCD28D3A956C41C6C2070472" : 0,
+    "37E4D95099C08E49E021328D51C75D58CA882617" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5FC8E7CB-2916-41D6-B07B-F8A3E089DD88",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A33D85CAB896FEEDCCD28D3A956C41C6C2070472" : "Gizwits-WaterPurifier_iOS\/",
+    "37E4D95099C08E49E021328D51C75D58CA882617" : "waterpurifier"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WaterPurifier",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WaterPurifier.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.xtremeprog.com:nomad\/waterpurifier.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "37E4D95099C08E49E021328D51C75D58CA882617"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zonotech\/Gizwits-WaterPurifier_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A33D85CAB896FEEDCCD28D3A956C41C6C2070472"
+    }
+  ]
+}
